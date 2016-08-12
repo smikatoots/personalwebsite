@@ -1,0 +1,95 @@
+body {
+  font-family: Avenir;
+  font-weight: 100;
+  margin: 0;
+}
+
+/* FIXED MENU */
+
+#menu {
+    background-color: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 30%;
+    left: 5%
+}
+
+#menubuttongroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menubutton {
+    border: none;
+    font-family: Avenir;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: black;
+    font-size: 40px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+    margin: 0px;
+}
+
+.menubutton:hover {
+    background-color: black;
+    color: white;
+}
+
+.menubutton:focus {
+    color: transparent;
+}
+
+#work {
+    color: #4DD1A2;
+}
+
+#about {
+    color: #FD5C59;
+}
+
+#contact {
+    color: #FFBF61;
+}
+
+/* HOME PAGE */
+
+#homepage {
+    background-color: #44609C;
+    color: white;
+}
+
+
+/* PORTFOLIO */
+
+#portfoliopage {
+    background-color: #4DD1A2;
+}
+
+/* ABOUT */
+
+#aboutpage {
+    background-color: #FD5C59;
+}
+
+/* CONTACT */
+
+#contactpage {
+    background-color: #FFBF61;
+}
+
+/*ALL PAGES */
+
+
+
+.wholepage {
+    height: 100%;
+    padding: 5% 5% 5% 25%;
+}
