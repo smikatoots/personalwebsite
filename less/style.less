@@ -1,3 +1,9 @@
+@import "elements.less";
+@navy: #44609C;
+@aqua: #4DD1A2;
+@salmon: #FD5C59;
+@yellow: #FFBF61;
+
 body {
   font-family: Avenir;
   font-weight: 100;
@@ -20,7 +26,7 @@ body {
 #menubuttongroup {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .menubutton {
@@ -47,49 +53,72 @@ body {
     color: transparent;
 }
 
+
+#hello {
+    color: @navy;
+}
+
 #work {
-    color: #4DD1A2;
+    color: @aqua;
 }
 
 #about {
-    color: #FD5C59;
+    color: @salmon;
 }
 
 #contact {
-    color: #FFBF61;
+    color: @yellow;
 }
 
 /* HOME PAGE */
 
-#homepage {
-    background-color: #44609C;
-    color: white;
+#hellopage {
+    border: solid 20px @navy;
+    color: black;
+    h1 {
+        color: @navy;
+    }
 }
 
 
 /* PORTFOLIO */
 
 #portfoliopage {
-    background-color: #4DD1A2;
+    border: solid 20px @aqua;
+    color: black;
+    h1 {
+        color: @aqua;
+    }
 }
 
 /* ABOUT */
 
 #aboutpage {
-    background-color: #FD5C59;
+    border: solid 20px @salmon;
+    color: black;
+    h1 {
+        color: @salmon;
+    }
 }
 
 /* CONTACT */
 
 #contactpage {
-    background-color: #FFBF61;
+    border: solid 20px @yellow;
+    color: black;
+    h1 {
+        color: @yellow;
+    }
 }
 
 /*ALL PAGES */
 
-
-
 .wholepage {
-    height: 100%;
-    padding: 5% 5% 5% 25%;
+    height: 85%;
+    padding: 0% 5% 5% 25%;
+    margin: 1% 1% 1% 1%;
+}
+
+h1 {
+    font-size: 100px;
 }

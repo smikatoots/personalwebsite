@@ -1,0 +1,15 @@
+<html>
+  <body>
+  <h1>Put here your HTML content before insertion of b.js.</h1>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+  <div ng-app="">
+   	<p>Name: <input type="text" ng-model="name"></p>
+   	<p ng-bind="name"></p>
+  </div>
+
+  <div ng-include="menu.html"></div>
+
+  <p>And here whatever content you want afterwards.</p>
+  </body>
+</html>
