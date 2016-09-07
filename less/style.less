@@ -1,37 +1,78 @@
 @import "elements.less";
+@charset "UTF-8";
 @navy: #44609C;
 @aqua: #4DD1A2;
 @salmon: #FD5C59;
 @yellow: #FFBF61;
+@bg: #282C34;
+@defaulttext: #DDE2E4;
 
 body {
-  font-family: Avenir;
+  font-family: avenir;
   font-weight: 100;
   margin: 0;
+  background-color: @bg;
 }
 
 /* FIXED MENU */
 
 #menu {
-    background-color: none;
     color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: fixed;
-    top: 30%;
+    top: 15%;
     left: 5%
 }
 
 #menubuttongroup {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+#menuimg {
+    height: 50px;
+    width: auto;
+}
+
+#hello {
+    color: @navy;
+    &:hover {
+        color: white;
+        background-color: @navy;
+    };
+}
+
+#work {
+    color: @aqua;
+    &:hover {
+        color: white;
+        background-color: @aqua;
+    };
+}
+
+#about {
+    color: @salmon;
+    &:hover {
+        color: white;
+        background-color: @salmon;
+    };
+}
+
+#contact {
+    color: @yellow;
+    &:hover {
+        color: white;
+        background-color: @yellow;
+    };
+}
+
 .menubutton {
     border: none;
-    font-family: Avenir;
+    font-family: avenir;
     text-transform: uppercase;
     background-color: transparent;
     color: black;
@@ -42,59 +83,183 @@ body {
     text-align: center;
     padding: 0px 10px 0px 10px;
     margin: 0px;
+
 }
 
-.menubutton:hover {
-    background-color: black;
-    color: white;
+#contactlinks {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+        background-color: white;
+        opacity: 0.5;
+        width: 20px;
+        height: 20px;
+        border: 1px solid transparent;
+        border-radius: 30px;
+        margin-left: 5px;
+        &:hover {
+            opacity: 1;
+        };
+    }
 }
 
-.menubutton:focus {
-    color: transparent;
+#spacer {
+    height: 50px;
 }
 
-
-#hello {
-    color: @navy;
+#menucredits {
+    color: @bg;
+    font-size: 15px;
+    text-align: center;
+    &:hover {
+        color: @defaulttext;
+    }
+    cursor: default;
 }
 
-#work {
-    color: @aqua;
-}
-
-#about {
-    color: @salmon;
-}
-
-#contact {
-    color: @yellow;
-}
 
 /* HOME PAGE */
 
 #hellopage {
-    border: solid 20px @navy;
     color: black;
     h1 {
         color: @navy;
+        margin: 0;
+    }
+    h2 {
+        color: @navy;
+        font-size: 80px;
+        margin: 0;
+        line-height: 60px;
+        font-weight: 500;
+        letter-spacing: -5px;
+    }
+
+    h3 {
+        color: @defaulttext;
+        font-size: 35px;
+        margin: 0;
+        line-height: 35px;
+        font-weight: 600;
+        letter-spacing: -1px;
+    }
+
+    h4 {
+        color: @defaulttext;
+        font-size: 30px;
+        margin: 0;
+        line-height: 30px;
+        font-weight: 300;
+        letter-spacing: 0px;
+    }
+
+    h5 {
+        color: @defaulttext;
+        font-size: 20px;
+        margin: 0;
+        line-height: 30px;
+        font-weight: 300;
+        letter-spacing: 0px;
+    }
+
+    .helloimg {
+        height: 200px;
+        width: auto;
+        margin-right: 30px;
     }
 }
 
 
-/* PORTFOLIO */
 
-#portfoliopage {
-    border: solid 20px @aqua;
+#hellocontent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px 0px 50px 0px;
+}
+
+
+/* WORK */
+
+#workpage {
     color: black;
     h1 {
         color: @aqua;
     }
+    button {
+        width: 100px;
+        height: 40px;
+        font-family: avenir;
+        font-size: 20px;
+        color: @aqua;
+        background-color: transparent;
+        border: 5px solid @aqua;
+        cursor: pointer;
+        margin: 5px;
+        &:hover {
+            background-color: @aqua;
+            color: white;
+        };
+        &:focus {
+            background-color: @aqua;
+            color: white;
+        };
+        &:active {
+            background-color: @aqua;
+            color: white;
+        };
+    }
+    #workheader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    position: relative;
+	height: 150px;
+    width: 150px;
+    background-color: black;
+    margin: 0px;
+    h2 {
+        position: absolute;
+        margin: auto;
+        bottom: 1%;
+        left: 5%;
+        color: white;
+        display: none;
+        font-size: 20px;
+    };
+    img {
+        height: 100%;
+        width: 100%;
+    };
+    &:hover {
+        h2 {
+        display: block;
+        };
+        img {
+        -webkit-animation: fadeIn 0.5s forwards;
+        -moz-animation: fadeIn 0.5s forwards;
+        -ms-animation: fadeIn 0.5s forwards;
+        -o-animation: fadeIn 0.5s forwards;
+        animation: fadeIn 0.5s forwards;
+        };
+    }
+}
+
 
 /* ABOUT */
 
 #aboutpage {
-    border: solid 20px @salmon;
     color: black;
     h1 {
         color: @salmon;
@@ -104,21 +269,74 @@ body {
 /* CONTACT */
 
 #contactpage {
-    border: solid 20px @yellow;
     color: black;
     h1 {
         color: @yellow;
     }
+
 }
 
 /*ALL PAGES */
 
 .wholepage {
-    height: 85%;
+    min-height: 100%;
     padding: 0% 5% 5% 25%;
     margin: 1% 1% 1% 1%;
+    h1 {
+        font-size: 100px;
+        margin: 0;
+    }
 }
 
-h1 {
-    font-size: 100px;
+button {
+    outline: none;
+}
+
+/*ANIMATIONS*/
+
+.hidden{
+     opacity:0;
+}
+.visible{
+     opacity:1;
+}
+
+.typed-cursor {
+  font-weight: 100;
+  padding: 0 2px;
+  -webkit-animation: blink 1s infinite;
+  -moz-animation: blink 1s infinite;
+  -ms-animation: blink 1s infinite;
+  -o-animation: blink 1s infinite;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
+@keyframes fadeIn{
+    0% { opacity:1; }
+    100% { opacity:0.5; }
+}
+@-webkit-keyframes fadeIn{
+    0% { opacity:1; }
+    100% { opacity:0.5; }
+}
+@-moz-keyframes fadeIn{
+    0% { opacity:1; }
+    100% { opacity:0.5; }
 }
