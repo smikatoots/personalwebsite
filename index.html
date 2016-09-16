@@ -6,18 +6,22 @@
   <!-- <link rel="stylesheet" href="css/animate.css"> -->
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery-2.1.4.min.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/filter.js"></script>
+  <!-- <script src="js/isotope.pkgd.min.js"></script> -->
+  <script type="text/javascript" src="js/smoothscroll.js"></script>
   <script src="js/typing.js"></script>
   <script src="js/typed.js"></script>
   <script src="js/randomhello.js"></script>
-  <script src="js/workgrid.js"></script>
-  <script type="text/javascript" src="js/smoothscroll.js"></script>
+  <!-- <script src="js/workgrid.js"></script> -->
+  <script src="js/filter.js"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Avenir">
 </head>
 
 <body>
+
+</div>
+
   <div id = "menu">
       <img id = "menuimg" src = "assets/logo.png"></img>
       <div id = "menubuttongroup">
@@ -48,8 +52,8 @@
       <h2 class="text">i'm <span id="description"></span></h2>
       <div id = "hellocontent"></div>
       <h3>
-          I thrive in the interstitial fluids of tech x business x design. </br>
-          Through my passions, I will one day improve developing economies starting with my home country, the Philippines. </br>
+          I thrive in the interstitial fluids of tech x business x design.
+          Through my passions, I will one day improve developing economies starting with my home country, the Philippines.
           For now, I design, ship and build products.
       </h3>
   </div>
@@ -64,9 +68,22 @@
               <button data-filter=".product" class = "menu-item">product</button>
           </div>
       </div>
-      <div id = "grid" class="grid">
 
+      <div id = "grid" class = "grid">
+          <button id="myBtn">Open Modal</button>
+          <button id="myBtn" class = "grid-item design">
+              <h5>Logos</h5>
+              <img src = "assets/work/logos.png">
+          </button>
+     </div>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">×</span>
+          <p>Some text in the Modal..</p>
+        </div>
       </div>
+
   </div>
 
   <div class = "wholepage" id = "aboutpage" data-appear-top-offset='-300'>
@@ -79,7 +96,7 @@
   </div>
 
 </body>
-
+<script src="js/modal.js"></script>
 <footer>
 </footer>
 

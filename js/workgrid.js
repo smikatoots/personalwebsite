@@ -100,18 +100,9 @@ var content = workgrid[i];
 document.getElementById("grid").innerHTML +=
     '<a href ="' + content.link + '"> \
         <div class = "' + content.class + '"> \
-            <h2>' + content.title + '</h2> \
+            <h5>' + content.title + '</h5> \
             <img src = "' + content.img + '"> \
         </div> \
     </a>'
 };
- //
- // for (i = 0; i < workgrid.length; i++)
- //    {
- //
- //    document.getElementById("grid").innerHTML =
- //      '<img class = "helloimg" src = "' + grid.img + '">' +
- //      '<div><h4>' + grid.text + '</h4>' +
- //      '<h5> The ' + grid.title + '.</h5></div>';
- //    };
 });
