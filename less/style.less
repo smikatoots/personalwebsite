@@ -1,6 +1,6 @@
 @import "elements.less";
 @charset "UTF-8";
-@navy: #44609C;
+@navy: #5777C3;
 @aqua: #4DD1A2;
 @salmon: #FD5C59;
 @yellow: #FFBF61;
@@ -53,7 +53,7 @@ body {
     -webkit-align-items: center;
     position: fixed;
     top: 15%;
-    left: 5%
+    left: 2%
 }
 
 #menubuttongroup {
@@ -115,7 +115,7 @@ body {
     width: 100%;
     font-weight: bold;
     text-align: center;
-    padding: 0px 10px 0px 10px;
+    padding: 10px 10px 0px 10px;
     margin: 0px;
 
 }
@@ -128,15 +128,17 @@ body {
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
-    -webkit-justify-content: space-between;
+    -webkit-justify-content: left;
+    flex-wrap: wrap;
     img {
         background-color: white;
         opacity: 0.5;
-        width: 20px;
-        height: 20px;
+        width: 100px;
+        height: 100px;
         border: 1px solid transparent;
-        border-radius: 30px;
+        border-radius: 100px;
         margin-left: 5px;
+        margin-top: 5px;
         &:hover {
             opacity: 1;
         };
@@ -198,6 +200,7 @@ body {
         height: 200px;
         width: auto;
         margin-right: 30px;
+        margin-bottom: 30px;
     }
 }
 
@@ -222,7 +225,7 @@ body {
     .modal {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
+        z-index: 2; /* Sit on top */
         padding-top: 100px; /* Location of the box */
         left: 0;
         top: 0;
@@ -234,11 +237,11 @@ body {
     }
 
     /* Modal Content */
-    .modal-content {
+    .modalblock {
         position: relative;
         background-color: #fefefe;
         margin: auto;
-        padding: 0;
+        padding: 50px;
         border: 1px solid #888;
         width: 80%;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -246,6 +249,27 @@ body {
         -webkit-animation-duration: 0.4s;
         animation-name: animatetop;
         animation-duration: 0.4s
+    }
+
+    .modaltitle {
+        color: grey;
+        font-size: 40px;
+    }
+
+    .modalcontent {
+        overflow-y: scroll;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        img {
+            height: 300px;
+            width: 300px;
+            margin-right: 50px;
+        }
+        a {
+            color: black;
+            font-weight: 500;
+        }
     }
 
     /* The Close Button */
@@ -325,21 +349,27 @@ body {
         position: relative;
     	height: 150px;
         width: 150px;
-        background-color: black;
         margin: 0px;
+        outline: none;
+        border: none;
+        background-color: white;
         h5 {
             position: absolute;
             margin: auto;
+            padding: 5%;
             bottom: 5%;
             left: 5%;
             color: white;
             display: none;
+            z-index: 1;
+            background-color: @aqua;
         };
         img {
             height: 100%;
             width: 100%;
         };
         &:hover {
+            cursor: pointer;
             h5 {
             display: block;
             };
@@ -354,18 +384,74 @@ body {
     }
 }
 
-
-
-
-
-/* ABOUT */
-
 #aboutpage {
     color: black;
     h1 {
         color: @salmon;
     }
+
+    .aboutheader {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .aboutitem {
+        display: none;
+    }
+
+    .aboutdefault {
+        display: block;
+    }
+
+    .aboutheader {
+        color: white;
+    }
+
+    .aboutcontent {
+        color: white;
+    }
+
+    a {
+        color: white;
+        text-decoration: underline;
+        &:hover {
+            background-color: @salmon;
+            color: white;
+        };
+    }
+
+
+    a.aboutbar {
+        text-decoration: none;
+        font-weight: normal;
+        width: 100px;
+        height: 40px;
+        font-family: avenir;
+        font-size: 20px;
+        color: @salmon;
+        background-color: transparent;
+        border: 5px solid @salmon;
+        cursor: pointer;
+        margin: 20px 5px 20px 5px;
+        padding: 5px 10px 0px 10px;
+        &:hover {
+            background-color: @salmon;
+            color: white;
+        };
+        &:focus {
+            background-color: @salmon;
+            color: white;
+        };
+        &:active {
+            background-color: @salmon;
+            color: white;
+        };
+    }
+
 }
+
 
 /* CONTACT */
 
@@ -374,15 +460,16 @@ body {
     h1 {
         color: @yellow;
     }
+    height: 40%
 
 }
 
 /*ALL PAGES */
 
 .wholepage {
-    min-height: 100%;
-    padding: 0% 5% 5% 25%;
-    margin: 1% 1% 200px 1%;
+    min-height: 80%;
+    padding: 5% 8% 5% 20%;
+    margin: 1% 1% 10px 1%;
     h1 {
         margin: 0;
     }
@@ -439,4 +526,77 @@ button {
 @-moz-keyframes fadeIn{
     0% { opacity:1; }
     100% { opacity:0.5; }
+}
+
+@media screen and (max-width: 800px) {
+    .modalcontent img {
+        display: none;
+    }
+    button.menu-item {
+        display: none;
+    }
+    .modaltitle {
+        font-size: 30px;
+    }
+    #hellocontent {
+        flex-direction: column;
+    }
+    #menu {
+        display: none;
+    }
+
+    #contactlinks {
+    img {
+        height: 50px;
+        width: 50px;
+        }
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 40px;
+        line-height: 30px;
+        letter-spacing: 0px;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    h4 {
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    h5 {
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .grid-item {
+        height: 50px;
+        width: 50px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    .menubutton {
+        font-size: 20px;
+    }
+
+    #menu {
+        width: 50px;
+        left: 8%;
+    }
+
+    button.menu-item, a.aboutbar {
+        display: none;
+    }
+
 }

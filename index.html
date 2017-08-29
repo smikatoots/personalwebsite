@@ -2,101 +2,511 @@
 <html>
 <head>
   <title> Mika Reyes </title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Avenir">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald">
   <link rel="stylesheet" href="css/animations.css">
-  <!-- <link rel="stylesheet" href="css/animate.css"> -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
   <script src="js/jquery-2.1.4.min.js"></script>
-  <!-- <script src="js/isotope.pkgd.min.js"></script> -->
+  <script src="js/isotope.pkgd.min.js"></script>
   <script type="text/javascript" src="js/smoothscroll.js"></script>
   <script src="js/typing.js"></script>
   <script src="js/typed.js"></script>
-  <script src="js/randomhello.js"></script>
-  <!-- <script src="js/workgrid.js"></script> -->
+  <script src="js/tab.js"></script>
   <script src="js/filter.js"></script>
-
+  <script src=”http://mikareyes.tumblr.com/js”></script>
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-89947163-1', 'auto');
+  ga('send', 'pageview');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Avenir">
 </head>
 
 <body>
 
+<!-- Introduction -->
+
+<div id = "top">
+
+    <div id = "intro">
+        <img id = "introimg" src = "assets/logo.png"></img>
+        <h1 class = "name">Mikaela Reyes</h1>
+        <p id = "social-icons">
+            <span><a href="mailto:hello@mikareyes.com?Subject=Hi%20Mika" target="_top"><i class="fa fa-google" style="font-size:24px"></i></a></span>
+            <span><a href="https://www.medium.com/@smikatoots"><i class="fa fa-medium" style="font-size:24px"></i></a></span>
+            <span><a href="https://www.facebook.com/smikatoots"><i class="fa fa-facebook" style="font-size:24px"></i></a></span>
+            <span><a href="http://linkedin.com/in/smikatoots"><i class="fa fa-linkedin" style="font-size:24px"></i></a></span>
+            <span><a href="http://github.com/smikatoots"><i class="fa fa-github" style="font-size:24px"></i></a></span>
+        </p>
+        <span><a href="http://mikareyes.tumblr.com">mikareyes.tumblr.com</a></span>
+
+    </div>
+
+
+
 </div>
 
-  <div id = "menu">
-      <img id = "menuimg" src = "assets/logo.png"></img>
-      <div id = "menubuttongroup">
-          <a href = "#hellopage" class="smoothScroll"><button id = "hello" class = "menubutton">hello</button></a>
-          <a href = "#workpage" class="smoothScroll"><button id = "work" class = "menubutton">work</button></a>
-          <a href = "#aboutpage" class="smoothScroll"><button id = "about" class = "menubutton">about</button></a>
-          <a href = "#contactpage" class="smoothScroll"><button id = "contact" class = "menubutton">contact</button></a>
-      </div>
-      <div id = "contactlinks">
-          <a href="mailto:reyes.mikaelahelene@gmail.com?Subject=Hi%20Mika" target="_top"><img src = "assets/email.png"></img></a>
-          <a href="http://facebook.com/smikatoots"><img src = "assets/facebook.png"></img></a>
-          <a href="http://medium.com/@smikatoots"><img src = "assets/medium.png"></img></a>
-          <a href="http://linkedin.com/in/smikatoots"><img src = "assets/linkedin.png"></img></a>
-          <a href="http://smikatoots.tumblr.com"><img src = "assets/tumblr.png"></img></a>
-          <a href="http://github.com/smikatoots"><img src = "assets/github.png"></img></a>
-          <a href="http://instagram.com/smikatoots"><img src = "assets/instagram.png"></img></a>
-          <a href="http://twitter.com/smikatweets"><img src = "assets/twitter.png"></img></a>
-      </div>
-      <div id = "spacer"></div>
-      <div id = "menucredits">
-          design & code by mika.</br>
-          reyes.mikaelahelene@gmail.com
-      </div>
-  </div>
+<!-- About -->
 
-  <div class = "wholepage" id = "hellopage">
-      <h1 class = "animated fadeInDown animateOnce">hello</h1>
-      <h2 class="text">i'm <span id="description"></span></h2>
-      <div id = "hellocontent"></div>
-      <h3>
-          I thrive in the interstitial fluids of tech x business x design.
-          Through my passions, I will one day improve developing economies starting with my home country, the Philippines.
-          For now, I design, ship and build products.
-      </h3>
-  </div>
-
-  <div class = "wholepage" id = "workpage">
-      <div id = "workheader">
-          <h1 class = "animated fadeInDown animateOnce">work</h1>
-          <div id = "filtermenu" class = "filter-button-group">
-              <button data-filter="*" class = "menu-item">all</button>
-              <button data-filter=".design" class="menu-item">design</button>
-              <button data-filter=".data" class = "menu-item">data</button>
-              <button data-filter=".product" class = "menu-item">product</button>
-          </div>
-      </div>
-
-      <div id = "grid" class = "grid">
-          <button id="myBtn">Open Modal</button>
-          <button id="myBtn" class = "grid-item design">
-              <h5>Logos</h5>
-              <img src = "assets/work/logos.png">
-          </button>
-     </div>
-
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <span class="close">×</span>
-          <p>Some text in the Modal..</p>
+<div id = "about">
+    <h2>About</h2>
+    <div id = "about-top">
+        <div id = "about-intro">
+            <img id = "about-top-image" src = "assets/test.png">
+            <div id = "about-top-text">
+                <h3>I'm <span id="description"></span></h3>
+                <p>I am a recent graduate of Wesleyan University ('17), with degrees in Economics and Psychology,
+                    and a minor in Data Analysis. I'm an almond addict, dance lover, tech geek, occasional writer, and proud Filipin<i>a</i>.
+                    My biggest dream is to give back to my communities in the Philippines and in S.E. Asia as much as they have given to me.
+                </p>
+            </div>
         </div>
-      </div>
+        <a href="/assets/Reyes_Resume.pdf" title="Download CV" class="button" download>DOWNLOAD CV</a>
+    </div>
 
-  </div>
+<!-- Columns -->
 
-  <div class = "wholepage" id = "aboutpage" data-appear-top-offset='-300'>
-      <h1 class = "animated fadeInDown">about</h1>
-      <div> span</div>
-  </div>
+    <div id = "about-bottom">
+        <div class = "about-bottom-content" id = "basics">
+            <h2>Basics</h2>
+            <div id = basics-content>
+                <h4> FULL NAME: </h4>
+                <p> Mikaela Helene (Mika) Ocampo Reyes </p></br></br>
+                <h4> PRONOUN/S: </h4>
+                <p> she, her </p></br></br>
+                <h4> HOME ORIGIN: </h4>
+                <p> Philippines </p></br></br>
+                <h4> HOBBIES: </h4>
+                <p> Dance, photography, design, coding, writing, fitness, travel</p></br></br>
+                <h4> LANGUAGES: </h4>
+                <p> English, Filipino </p></br></br>
+                <h4> ONLINE ALIAS: </h4>
+                <p> smikatoots </p>
+            </div>
+        </div>
 
-  <div class = "wholepage" id = "contactpage">
-      <h1 class = "animated fadeInDown">contact</h1>
-  </div>
+        <div class = "about-bottom-content" id = "education">
+            <h2>Education</h2>
+            <div id = education-content>
+                <h4>Wesleyan University '13-'17</h4>
+                <p>B.A. Economics & Psychology, minor in Data Analysis, Freeman Asian Scholar</p>
+                <h4>Harvard Business School '16</h4>
+                <p>HBX Core Participant on full scholarship</p>
+                <h4>Philippine Science HS '09-'13</h4>
+                <p>Scholar, High Honors, Gerry Roxas Awardee</p>
+                <h4>Horizons School of Technology '17</h4>
+                <p>Software engineering fellow</p>
+            </div>
+        </div>
+
+        <div class = "about-bottom-content" id = "skills">
+            <h2>Skills</h2>
+            <div id = skills-content>
+                <ul class="skill-bars">
+				   <li>
+				   	<div class="progress percent95"><span>95%</span></div>
+				   	<h4>HTML5 / CSS3</h4>
+				   </li>
+				   <li>
+				   	<div class="progress percent95"><span>95%</span></div>
+				   	<h4>Photoshop / Sketch</h4>
+				   </li>
+				   <li>
+				   	<div class="progress percent85"><span>85%</span></div>
+				   	<h4>R / STATA</h4>
+				   </li>
+				   <li>
+				   	<div class="progress percent90"><span>90%</span></div>
+				   	<h4>Python, SQL</h4>
+				   </li>
+                   <li>
+				   	<div class="progress percent95"><span>95%</span></div>
+				   	<h4>Javascript</h4>
+				   </li>
+				</ul>
+            </div>
+        </div>
+
+        <div class = "about-bottom-content" id = "philosophies">
+            <h2> Philosophies </h2>
+            <div id = philo-content>
+                <h4>MULTIDISCIPLINARY</h4>
+                <p> Because of my liberal arts education and travels abroad, I value the need for a variety of perspectives in problem-solving.</p>
+                <h4>EMPATHETIC</h4>
+                <p> My self-taught design thinking mindset tells me that we always design for our human users, not for our selfish needs. </p>
+                <h4>ITERATIVE</h4>
+                <p> I crave feedback in everything I do. Failure and iterative learning is crucial to anyone's success. </p>
+                <h4>DATA HUNGRY</h4>
+                <p> I draw from my background in behavioral economics and data analysis and use data to leverage great insights.</p>
+                <h4>ENTREPRENEURIAL</h4>
+                <p> I learned UX design, how to code, and business fundamentals through MOOCs, projects and teaching others. I'm a self-learner, self-starter and a go-getter!  </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio -->
+
+<div id = "work">
+    <h2> Portfolio </h2>
+        <div id = "filtermenu" class = "filter-button-group">
+            <button data-filter="*" class = "menu-item">all</button>
+            <button data-filter=".design" class="menu-item">design</button>
+            <button data-filter=".data" class = "menu-item">data</button>
+            <button data-filter=".leadership" class = "menu-item">leadership</button>
+        </div>
+
+       <div class = "grid">
+          <a href = "#">
+            <div id="prodreviewmodalbtn" class = "grid-item design product">
+                <h5>Product Reviews</h5>
+                <img src = "assets/work/prodreview.png">
+            </div>
+          </a>
+          <a href = "#">
+            <div id="roboterramodalbtn" class = "grid-item design product">
+                <h5>Roboterra</h5>
+                <img src = "assets/work/castlerock.png">
+            </div>
+          </a>
+          <!-- <a href = "#">
+            <div id="pointlightmodalbtn" class = "grid-item design product">
+                <h5>PointLight</h5>
+                <img src = "assets/work/pointlight.png">
+            </div>
+          </a> -->
+          <a href = "#">
+            <div id="medgrocermodalbtn" class = "grid-item design product">
+                <h5>Medgrocer</h5>
+                <img src = "assets/work/medgrocer.jpg">
+            </div>
+          </a>
+          <a href = "#">
+            <div id="naiamodalbtn" class = "grid-item design product data leadership">
+                <h5>Airport Redesign</h5>
+                <img src = "assets/work/naia.png">
+            </div>
+          </a>
+          <a href = "#">
+            <div id="dtmodalbtn" class = "grid-item design product leadership">
+                <h5>Innovation through Design Thinking</h5>
+                <img src = "assets/work/dt.png">
+            </div>
+          </a>
+          <a href = "#">
+            <div id="diasporamodalbtn" class = "grid-item data">
+                <h5>A Brief History of the PH Diaspora</h5>
+                <img src = "assets/work/diaspora.png">
+            </div>
+          </a>
+          <a href = "#">
+            <div id="chikvmodalbtn" class = "grid-item data">
+                <h5>Research Projects</h5>
+                <img src = "assets/work/chikv.png">
+            </div>
+          </a>
+          <a href = "#">
+            <div id="kaimodalbtn" class = "grid-item leadership">
+                <h5>Kai Entrepreneuership Wesleyan</h5>
+                <img src = "assets/work/kai.png">
+            </div>
+          </a>
+          <a href = "#">
+            <div id="kailabsmodalbtn" class = "grid-item product leadership">
+                <h5>Kai Labs Student Forum</h5>
+                <img src = "assets/work/kailabs.jpg">
+            </div>
+          </a>
+          <a href = "#">
+            <div id="bcbmodalbtn" class = "grid-item product design">
+                <h5>Birth Control Bot</h5>
+                <img src = "assets/work/bcb.png">
+            </div>
+          </a>
+          <a href = "#">
+            <div id="wesadmitsmodalbtn" class = "grid-item product design">
+                <h5>WesAdmits</h5>
+                <img src = "assets/work/wesadmits.png">
+            </div>
+          </a>
+          <a href = "#">
+            <div id="handshakemodalbtn" class = "grid-item product design">
+                <h5>Handshake Redesign</h5>
+                <img src = "assets/work/handshake.jpg">
+            </div>
+          </a>
+       </div>
+
+         <div id="prodreviewmodal" class="modal">
+           <div class="modalblock">
+             <span class = "close prodreviewclose">x</span>
+             <p class = "modaltitle">Product Reviews</p>
+             <div class = "modalcontent">
+                 <img src = "assets/work/prodreview.png">
+                 <ul>Here are some favorites:<br><br>
+                         <li><a href="https://medium.com/@smikatoots/redesigning-wesleyan-s-nightly-shuttle-service-the-ride-1b5c8de21e32#.cp2geg9p1">
+                         Redesigning Wesleyan's Nightly Shuttle Service: The Ride </a></li>
+                         <li><a href="https://medium.com/the-lemon-scope/a-semi-comprehensive-review-of-kalibrr-5c10d3e88c45#.ltez8zvkl">
+                         A Semi-Comprehensive Review of Kalibrr </a></li>
+                         <li><a href="https://medium.com/the-lemon-scope/the-lending-club-website-product-review-a8fd7bea4dee#.vim6pm8ua">
+                         Lending Club Website Product Review </a></li>
+                         <li><a href="https://medium.com/the-lemon-scope/finding-the-heroes-near-you-servishero-app-review-7f7eda00306b#.o387mjvh3">
+                         Finding the Heroes Near You: ServisHero App Review </a></li>
+                         <li><a href="https://medium.com/the-lemon-scope/a-sort-of-product-review-of-roboterra-1913735150e7#.pplx87o6g">
+                         A Sort of Product Review of Roboterra </a></li>
+                 </ul>
+             </div>
+           </div>
+         </div>
+
+         <div id="roboterramodal" class="modal">
+           <div class="modalblock">
+             <span class = "close roboterraclose">x</span>
+             <p class = "modaltitle">Roboterra Web App</p>
+             <p class = "modalsub">(May 2016 - August 2016)</p>
+             <div class = "modalcontent">
+                 <img src = "assets/work/castlerock2.png">
+                 <p>For Summer 2016, I worked in a robotics edtech startup called <a href="http://roboterra.com">Roboterra</a> based in Silicon Valley.
+                  I designed the entire user interface of the CastleRock webapp, and a resources integration platform. I developed and deployed the frontend with 3 engineers using Electron, React.js, Redux.js and three.js. This also involved extensive research for the creation of the onboarding process of the webapp.
+                  <br><br>
+                  Our work contributed to maximizing the efficiency of Roboterra's 4 global offices. Our work was also used as the second version of the product Roboterra created, deployed to 3000+ teachers and students.
+                  <br><br>
+                  I also eventually helped with product management jobs such as content writing, collaborating across teams, setting up an Agile environment, designing implementation plans, writing specs, coding, and the like.
+                  <br><br>
+                  Read more about our work here:
+                  <br><br>
+                      <a href="/assets/files/cs-roboterra_desktop_app.pdf" title="roboterra_desktop_app" class = "button" download>DESKTOP APP</a>
+                      <a href="/assets/files/cs-roboterra_integration.pdf" title="roboterra_integration" class = "button" download>WEB APP</a>
+                      <a href="/assets/files/cs-roboterra_onboarding.pdf" title="roboterra_onboarding" class = "button" download>ONBOARDING</a>
+                 </p>
+             </div>
+           </div>
+         </div>
+
+         <div id="medgrocermodal" class="modal">
+           <div class="modalblock">
+             <span class = "close medgrocerclose">x</span>
+             <p class = "modaltitle">MedGrocer Products</p>
+             <p class = "modalsub">(June 2015 - September 2015)</p>
+             <div class = "modalcontent">
+                 <img src = "assets/work/medgrocer3.png">
+                 <p> I interned for MedGrocer in Summer 2015 (after I failed at a business-- great learning experience!)<br><br>
+                     <a href="http://medgrocer.com">MedGrocer</a> is a tech-enabled startup that enables delivery of trusted drugs.
+                     This summer was my first foray into the tech startup scene. Here I realized the potential that technology had to reach a mass of people.
+                     I helped develop the product through talking with customers, forming partnerships with health professionals, developing the website, and initiating a project of my own: a mobile app. <br><br>
+                     <br>
+                     Read about how I designed the Android App here:
+                     <br>
+                     <a href="/assets/files/cs-medgrocer_android_app.pdf" title="medgrocer_android_app" class = "button" download>ANDROID APP</a>
+                     </p>
+             </div>
+           </div>
+         </div>
+
+         <div id="naiamodal" class="modal">
+           <div class="modalblock">
+             <span class = "close naiaclose">x</span>
+             <p class = "modaltitle">NAIA Airport Redesign</p>
+             <p class = "modalsub">(December 2015)</p>
+             <div class = "modalcontent">
+                 <img src = "assets/work/naia2.png">
+                 <p> I initiated a project with the CEO of a domestic airport in the Philippines. He knew that I was training with User Experience and Human-Centered Design studies
+                     and wanted to find a way to improve the airport through this process. My task:
+                     Use human-centered design to improve the User Experience of NAIA Terminal IV. I gathered 5 friends who were also into design, we crafted
+                     a 4-day research plan and scheduled brainstorming sessions thereafter. We submitted our reports, and I'm proud to say that one year after
+                     we did the design research, the airport implemented bits of our designs to improve the airport experience. <br><br>
+                     Read our reports and some lessons learned here:<br>
+                     <a href="https://medium.com/@smikatoots/lessons-from-redesigning-an-airport-pt-2-21e57a80bde8#.x2wl3cedi" class = "button">REFLECTIONS</a>
+                     <a href="https://drive.google.com/drive/u/0/folders/0BwKJdQBQ-XMXa0UxSFRRS0dUM0k" class = "button">DOCUMENTS</a>
+                     <a href="https://photos.google.com/share/AF1QipMPYKnFqSbV3wz9zLam0pCTJRjp6Yqq0toLrTUiqhz_9l7oGcmiMf7sgf4LMQlySQ?key=dGlyRV9wbmhpbUxoVE5hYzVRYkt5eGQ3X1dnNWZn" class = "button">GALLERY</a>
+                 </p>
+             </div>
+           </div>
+         </div>
+
+         <div id="dtmodal" class="modal">
+           <div class="modalblock">
+             <span class = "close dtclose">x</span>
+             <p class = "modaltitle">Design Thinking Class</p>
+             <p class = "modalsub">(January 2015 - May 2015)</p>
+             <div class = "modalcontent">
+                 <img src = "assets/work/dt2.png">
+                 <p> I wanted to bring a culture of design on campus, and also teach myself the principles of human-centered design.
+                     In spring of 2015, I ended up crafting a for-credit semester-long class that taught 15 students design thinking through hands-on projects.
+                     The 5 groups worked with non-profits, student organizations, and local companies.
+                     One group created the entire branding system of a student organization. Another design the physical layout and space of a non-profit's office.
+                     One of our students was so enthusiastic about the HCD process, she offered to teach the class in the next semester.
+                     The greatest feeling is seeing our students years after and hearing about how they continue to use the creative skillsets they learned in their every day.
+                     One graduate uses what he learned in his work in a medical institution while another student talks about how she feels more empowered to be a creative when she otherwise would have felt disencouraged.
+                     Warms my heart!
+                     <br><br>Unfortunately, our Tumblr blog was taken down, but here was our initial syllabus:<br>
+                     <a href="https://drive.google.com/file/d/0BwKJdQBQ-XMXTFJhdTE2aVd2QkU/view" class = "button">SYLLABUS</a>
+                 </p>
+             </div>
+           </div>
+         </div>
+
+         <div id="diasporamodal" class="modal">
+           <div class="modalblock">
+             <span class = "close diasporaclose">x</span>
+             <p class = "modaltitle">Diaspora Project</p>
+             <p class = "modalsub">(March 2016 - May 2016)</p>
+             <div class = "modalcontent">
+                 <img src = "assets/work/diaspora.png">
+                 <p> I did a mini data visualization project that explored the patterns of Philippine immigration through the years.
+                     I'm really passionate about Filipinos all over the world, and I wanted to trace out the numbers of Filipino diaspora members globally!
+                     I used (sparse) data from phil.gov. I used R for analysis and preliminary visualization and Excel for extensive visualization.<br><br>
+                     Here's the link to my project:<br>
+                     <a href="https://medium.com/multipotentialism/profiles-of-the-diaspora-a-look-into-philippine-migration-c0d3f766d27a#.df4rwev3y" class = "button">PROJECT</a>
+                 </p>
+             </div>
+           </div>
+         </div>
+
+         <div id="chikvmodal" class="modal">
+           <div class="modalblock">
+             <span class = "close chikvclose">x</span>
+             <p class = "modaltitle">Research Projects</p>
+             <div class = "modalcontent">
+                 <img src = "assets/work/chikv.png">
+                 <ul> I try a range of data-related projects. I am happy to delve deeper into them if asked!
+                 Here are some examples:<br><br>
+                     <li> Cross-Country Analysis of Gender Wage Gaps and GDP: exploring GDP growth and wage gap inequality. </li>
+                     <li> Playing the Race Card: when Whites claim bias, Blacks are at a higher advantage than Whites are when Blacks claim. </li>
+                     <li> Effect of Coconut Oil on the Peroxisomal Beta Oxidation of Fatty Acids: does coconut oil significantly affect the rate of inhibition of peroxisomal beta-oxidation?</li>
+                     <li> Comparative Analysis of DENV and CHIKV Virus: compared structures of 4 DENV serotypes with CHIKV for further studies on treatments.</li>
+                  </ul>
+             </div>
+           </div>
+         </div>
+
+         <div id="kaimodal" class="modal">
+           <div class="modalblock">
+             <span class = "close kaiclose">x</span>
+             <p class = "modaltitle">Kai Entrepreneurship Wesleyan</p>
+             <div class = "modalcontent">
+                 <img src = "assets/work/kai.png">
+                 <p><a href="http://kaiwes.com">Kai Entrepreneurship Wesleyan</a> is a non-profit that promotes inclusion and diversity in entrepreneurship.
+                     We have a range of programs including trips to Silicon Valley and the New York tech scene, mentorship programs,
+                     for-credit classes for business, design and engineering, speaker series and much more! I co-founded this group in my
+                     sophomore year of college and remain its co-president. <br><br>
+                     We are always open to welcoming people who might be interested in joining or collaborating with our group. Reach out to info@kaiwes.com for more details.
+                </p>
+             </div>
+           </div>
+         </div>
+
+         <div id="kailabsmodal" class="modal">
+           <div class="modalblock">
+             <span class = "close kailabsclose">x</span>
+             <p class = "modaltitle">Kai Labs</p>
+             <div class = "modalcontent">
+                 <img src = "assets/work/kailabs.jpg">
+                 <p>Kai Labs is a project under Kai Entrepreneurship Wesleyan. I serve as the head "teacher" and coordinator.
+                     It is a for-credit class taught by a team of 5 other student-teachers
+                     wherein students get to work on real projects with faculty and staff clients to develop their
+                     engineering, design and management skills. It mimics the real world and allows our students to interact
+                     with real clients and solve problems at Wesleyan. <br><br>
+                     We're currently going through the semester with the first iteration of our class. It's exciting and I'm hoping
+                     our students learn as much as we learn from them. <br><br>
+                     Here's a link to our syllabus:<br>
+                     <a href="/assets/files/kailabs_syllabus.pdf" class = "button" download>SYLLABUS</a>
+                 </p>
+             </div>
+           </div>
+         </div>
+
+         <div id="bcbmodal" class="modal">
+           <div class="modalblock">
+             <span class = "close bcbclose">x</span>
+             <p class = "modaltitle">Birth Control Bot</p>
+             <div class = "modalcontent">
+                 <img src = "assets/work/bcb.png">
+                 <p>Birth Control Bot is a sms messaging bot for people to obtain information about birth control
+                     options near them. Users can discreetly find out which options most cohere with their choices
+                     and bodies, as well as receive addresses of nearby locations to obtain birth control without
+                     needing a smartphone or accessing the internet. This project, built using Python, Flask,
+                     HTML, CSS, JS, and the Twilio API won first runner-up in the
+                     Spectra (all womens) Hackathon Summer 2016 in Youtube Headquarters in San Bruno.<br><br>
+                     Here's the link to the Github repository:<br>
+                     <a href="https://github.com/smsukardi/birth-control-bot" class = "button">REPOSITORY</a>
+                 </p>
+             </div>
+           </div>
+         </div>
+
+         <div id="wesadmitsmodal" class="modal">
+           <div class="modalblock">
+             <span class = "close wesadmitsclose">x</span>
+             <p class = "modaltitle">WesAdmits</p>
+             <div class = "modalcontent">
+                 <img src = "assets/work/wesadmits2.png">
+                 <p> I wanted to create an app that made all our school's requests (rides, lost and found, event announcement) on our Facebook group more efficient.
+                     At that time, I had to post my request on all 4 batch groups, hoping someone would answer. On user’s feeds, not everything is sent to the entire student body,
+                     and my post may potentially just fade away. <br><br>
+                     I sought an engineer to help me with the back-end and I designed the beginnings of the user interface and coded the front-end.<br><br>
+                     Check out the case study here:<br>
+                     <a href="/assets/files/cs-wesadmits_web_app.pdf" class = "button" download>CASE STUDY</a>
+                 </p>
+             </div>
+           </div>
+         </div>
+
+         <div id="handshakemodal" class="modal">
+           <div class="modalblock">
+             <span class = "close handshakeclose">x</span>
+             <p class = "modaltitle">Handshake Redesign</p>
+             <div class = "modalcontent">
+                 <img src = "assets/work/handshake2.png">
+                 <p> My university started using a new job search platform called <a href="http://joinhandshake.com">Handshake</a>
+                     It was infinitely better than our previous platform, but was still rife with a few problems. I decided to
+                     go through an exercise to redesign Handshake and came up with low-fi wireframes and high-fi mockups at the end.
+                     I'm hoping this can somewhat benefit Handshake or inform a few of their designs in some way.<br><br>
+                     Check out the case study here:<br>
+                     <a href="/assets/files/cs-handshake_redesign.pdf" class = "button" download>CASE STUDY</a>
+                 </p>
+             </div>
+           </div>
+         </div>
+
+    </div>
+
+<!-- Contact -->
+
+<div id = "contact">
+    <h2>Contact</h2>
+    <div id="contact-info">
+            <div class = "contact-item">
+                <i class="em em-round_pushpin" style="font-size:30px"></i></br>
+                <h4>Let's grab a meal.</h4>
+                <span>San Francisco, CA</span>
+            </div>
+            <div class = "contact-item">
+                <i class="em em-mailbox_with_mail" style="font-size:30px"></i></br>
+                <h4>I love random mail!</h4>
+                <span>hello@mikareyes.com</span>
+            </div>
+            <div class = "contact-item">
+                <i class="em em-telephone" style="font-size:30px"></i></br>
+                <h4>Call me, beep me.</h4>
+                <span>(860) 754 4996</span>
+            </div>
+    </div></br></br>
+    <p>&#169; Coded by Mika Reyes, 2017.</p>
+</div>
+
+<!-- Java Script -->
+<script src="js/modal.js"></script>
 
 </body>
-<script src="js/modal.js"></script>
+
 <footer>
 </footer>
 
